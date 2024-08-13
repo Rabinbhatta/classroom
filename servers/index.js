@@ -9,11 +9,13 @@ dotenv.config()
 
 const app = express();
 
+app.use(express.json())
+app.use(cors())
+
 app.use("/auth",authRoute)
 app.use("/classroom",classroomRoute)
 
-app.use(express.json())
-app.use(cors())
+
 
 mongoose.set()
 

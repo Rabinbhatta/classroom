@@ -1,0 +1,12 @@
+.day-select {
+    color: #DDDFE2;
+    width: 85%;
+    height: 7vh;
+    border: solid 2px #3E4A5F;
+    outline: none;
+    border-radius: 10px;
+    background-color: #191C23;
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,135 @@
+
+
+.admin-dashboard{
+    background-color: #1A1D22;
+
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main-container{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+
+.table-container{
+    display: flex;
+    gap: 30px;
+}
+
+.table{
+  margin-bottom: 20px;
+  width: 50vh;
+  text-align: center;
+}
+.classtable{
+margin-bottom: 20px;
+  width: 80vw;
+  text-align: center;
+}
+
+
+
+
+ h1{
+    color :#534FC9;
+}
+
+.teacher-student-table {
+   font-size: 30px;
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.teacher-student-table th, .teacher-student-table td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+}
+
+.teacher-student-table th {
+    background-color: #534FC9;
+}
+
+.teacher{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-teacher{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding:5px;
+    background-color: black;
+    height: 3vh;
+    border-radius: 5px;
+}
+
+.add-teacher button{
+  border: none;
+  background-color: black;
+  color: white;
+  height: 2vh;
+}
+
+.register-container{
+    position: absolute;
+    top: 28vh;
+    right: 30vw;
+    width: 40vw;
+    height: 53vh;
+    background-color: #534FC9;;;
+    text-align: center;
+    color:white  ;
+    border-radius: 30px;
+    z-index: 99;
+}
+
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.register input{
+    color:#DDDFE2;
+  width: 80%;
+  height: 5vh;
+  border: solid 2px #3E4A5F;
+  outline: none;
+  border-radius: 10px;
+  background-color: #191C23;;
+  padding: 5px 10px 5px 10px;
+  font-size: 16px;
+}
+.register select{
+    color:#DDDFE2;
+    width: 85%;
+    height: 6.5vh;
+    border: solid 2px #3E4A5F;
+    outline: none;
+    border-radius: 10px;
+    background-color: #191C23;;
+    padding: 5px 10px 5px 10px;
+    font-size: 16px;
+}
+.close{
+    position: absolute;
+    right: 1px
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
