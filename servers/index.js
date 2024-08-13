@@ -10,7 +10,11 @@ dotenv.config()
 const app = express();
 
 app.use(express.json())
-app.use(cors())
+const corsOptions = {
+    origin: 'http://example.com',
+    methods: ['GET', 'POST'],     
+  
+};
 
 app.use("/auth",authRoute)
 app.use("/classroom",classroomRoute)
@@ -19,7 +23,7 @@ app.use("/classroom",classroomRoute)
 
 mongoose.set()
 
-mongoose.connect(process.env.MONGODB).then(()=>app.listen(process.env.PORT,
-    ()=>console.log(`Server listening at ${process.env.PORT}`)
+mongoose.connect("mongodb+srv://rabinbhattarai646:WuuIb9toaQF7xjDv@intern.tzwkf.mongodb.net/").then(()=>app.listen(8000,
+    ()=>console.log(`Server listening at 8000`)
 )).catch((error)=>console.log(error))
 
