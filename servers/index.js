@@ -10,11 +10,7 @@ dotenv.config()
 const app = express();
 
 app.use(express.json())
-const cors = {
-     
-  
-};
-
+app.use(cors());
 app.use("/auth",authRoute)
 app.use("/classroom",classroomRoute)
 
