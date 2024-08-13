@@ -46,7 +46,7 @@ const Admin = () => {
     };
     const handleRemove = async(id)=>{
         try {
-            const response = await fetch(`http://localhost:3001/auth/delete/${id}`, {
+            const response = await fetch(`https://classroom-y3rg.onrender.com/auth/delete/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' },
             });
@@ -64,7 +64,7 @@ const Admin = () => {
     // Fetch teacher and student data
     const getUser = async () => {
         try {
-            const response = await fetch('http://localhost:3001/auth/getUser', {
+            const response = await fetch('https://classroom-y3rg.onrender.com/auth/getUser', {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             });
@@ -83,7 +83,7 @@ const Admin = () => {
     // Fetch classroom data
     const getClassroom = async () => {
         try {
-            const response = await fetch('http://localhost:3001/classroom/getClassroom', {
+            const response = await fetch('https://classroom-y3rg.onrender.com/classroom/getClassroom', {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             });
@@ -97,7 +97,7 @@ const Admin = () => {
 
     const handleFormSubmit = async (values, { setSubmitting }) => {
         try {
-            const response = await fetch('http://localhost:3001/auth/createUser', {
+            const response = await fetch('https://classroom-y3rg.onrender.com/auth/createUser', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(values),

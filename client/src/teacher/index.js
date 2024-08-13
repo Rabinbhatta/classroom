@@ -21,7 +21,7 @@ const Teacher = () => {
     };
     const handleRemove = async(id)=>{
         try {
-            const response = await fetch(`http://localhost:3001/auth/delete/${id}`, {
+            const response = await fetch(`https://classroom-y3rg.onrender.com/auth/delete/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' },
             });
@@ -35,7 +35,7 @@ const Teacher = () => {
 
     const getClassroom = async () => {
         try {
-            const response = await fetch(`http://localhost:3001/classroom/${userinfo.user._id}`, {
+            const response = await fetch(`https://classroom-y3rg.onrender.com/classroom/${userinfo.user._id}`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             });

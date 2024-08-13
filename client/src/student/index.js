@@ -23,7 +23,7 @@ const Student = () => {
 
     const getClassroom = async () => {
         try {
-            const response = await fetch(`http://localhost:3001/classroom/student/${userinfo.user._id}`, {
+            const response = await fetch(`https://classroom-y3rg.onrender.com/classroom/student/${userinfo.user._id}`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             });

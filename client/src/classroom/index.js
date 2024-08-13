@@ -74,7 +74,7 @@ const Classroom = () => {
 
     const getUser = async () => {
         try {
-            const response = await fetch('http://localhost:3001/auth/getUser', {
+            const response = await fetch('https://classroom-y3rg.onrender.com/auth/getUser', {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             });
@@ -105,7 +105,7 @@ const Classroom = () => {
 
     const handleFormSubmit = async (values, { setSubmitting },) => {
         try {
-            const response = await fetch('http://localhost:3001/classroom/create', {
+            const response = await fetch('https://classroom-y3rg.onrender.com/classroom/create', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
