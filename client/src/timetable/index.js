@@ -26,8 +26,17 @@ const Timetable = () => {
     const navigate = useNavigate();
     const [dayOptions, setDayOptions] = useState([]);
     const [classid,setClassId] = useState(null)
-    const token = localStorage.getItem('userinfo');
-    const userinfo = token ? JSON.parse(token) : { user: { _id: '' }, token: '' };
+    const token = localStorage.getItem("userinfo");
+    const userinfo = token ? JSON.parse(token) : {
+        user: {
+            _id: "",
+            name: "",
+            email: "",
+            password: "",
+            role: ""
+        },
+        token: ""
+    };
 
     const getClassroom = async () => {
         try {
@@ -67,8 +76,14 @@ const Timetable = () => {
             setSubmitting(false);
         }
     };
+    const checkRole = () => {
+        if (userinfo.user.role !== "Teacher") {
+            navigate("/");
+        }
+    }
 
     useEffect(() => {
+        checkRole()
         getClassroom();
     }, []);
 

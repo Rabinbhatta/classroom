@@ -71,6 +71,17 @@ const Classroom = () => {
     const navigate = useNavigate()
     const [teacherOptions,setTeacherOption] = useState([])
     const [studentOptions,setStudentsOption] = useState([])
+    const token = localStorage.getItem("userinfo");
+    const userinfo = token ? JSON.parse(token) : {
+        user: {
+            _id: "",
+            name: "",
+            email: "",
+            password: "",
+            role: ""
+        },
+        token: ""
+    };
 
     const getUser = async () => {
         try {
@@ -123,9 +134,15 @@ const Classroom = () => {
             setSubmitting(false);
         }
     };
+    const checkRole = () => {
+        if (userinfo.user.role !== "Principal") {
+            navigate("/");
+        }
+    }
 
   
     useEffect(() => {
+        checkRole()
         getUser()
     }, []);
 
